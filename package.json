@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "yarn lint; tsc",
-    "start": "yarn build; node ."
+    "start": "yarn build; node .",
+    "start:last": "node ."
   },
   "dependencies": {
     "express": "^4.17.1",

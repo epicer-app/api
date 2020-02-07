@@ -11,6 +11,7 @@ FROM node:12.10 as runtime
 WORKDIR /app
 COPY --from=build /app/dist /app/dist
 COPY --from=build /app/package.json /app/package.json
+COPY --from=build /app/node_modules /app/node_modules
 COPY --from=build /app/static /app/static
 ENV NODE_ENV docker
 EXPOSE 3000
