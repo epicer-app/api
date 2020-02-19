@@ -8,9 +8,10 @@
       
       // retrieve the "greeting" key from the root of the Virtual JSON resource
       model.
-        get("greeting").
+        get("recipesById.asdf1234.name").
         then(function(response) {
-          document.write(response.json.greeting);
+          // document.write(response.json.greeting);
+          console.log(response);
         });
     </script>
   </head>

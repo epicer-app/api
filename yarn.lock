@@ -33,6 +33,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cors@^2.8.6":
+  version "2.8.6"
+  resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.6.tgz#cfaab33c49c15b1ded32f235111ce9123009bd02"
+  integrity sha512-invOmosX0DqbpA+cE2yoHGUlF/blyf7nB0OGYBBiH27crcVm5NmFaZkLP4Ta1hGaesckCi5lVLlydNJCxkTOSg==
+  dependencies:
+    "@types/express" "*"
+
 "@types/express-serve-static-core@*":
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.2.tgz#f6f41fa35d42e79dbf6610eccbb2637e6008a0cf"
@@ -79,7 +86,7 @@
     "@types/falcor-json-graph" "*"
     "@types/rx" "*"
 
-"@types/falcor@*":
+"@types/falcor@*", "@types/falcor@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/falcor/-/falcor-2.0.0.tgz#2fbd354b5f90b0eea00539c08a72ccfa153bdb36"
   integrity sha512-O3Ndt/G3Hm0fvbmnpx1qL4YLH54g8PFBf6An2l1VwZFYGertePmp/2LeRH4I1Seco0S6Qz1r5Uz8v40OJP6S5A==
@@ -330,6 +337,14 @@ cookie@0.4.0:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.0.tgz#beb437e7022b3b6d49019d088665303ebe9c14ba"
   integrity sha512-+Hp8fLp57wnUSt0tY0tHEXh4voZRDnoIrZPqlo3DPiI4y9lwg/jqx+1Om94/W6ZaPDOUbnjOt/99w66zk+l1Xg==
 
+cors@^2.8.5:
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
+  integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
+  dependencies:
+    object-assign "^4"
+    vary "^1"
+
 debug@2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -432,10 +447,22 @@ falcor-express@^0.1.4:
     express "^4.11.1"
     rx "~2.3.24"
 
+falcor-json-graph@1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/falcor-json-graph/-/falcor-json-graph-1.1.7.tgz#81d6a456ad14e04b13d8cf8265836acbf7a3053b"
+  integrity sha1-gdakVq0U4EsT2M+CZYNqy/ejBTs=
+  dependencies:
+    falcor-path-syntax "0.2.4"
+
 falcor-path-syntax@0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/falcor-path-syntax/-/falcor-path-syntax-0.2.4.tgz#6e72ba0bc236f4dda73040a001652792a32d8fc8"
   integrity sha1-bnK6C8I29N2nMECgAWUnkqMtj8g=
+
+falcor-path-utils@0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/falcor-path-utils/-/falcor-path-utils-0.7.2.tgz#70fb4fb3081bc659a220f689fbe185898d4bfcc2"
+  integrity sha512-oye5xtETC9spEZlOxGOB5Oqtgsj2XPxQdp9cVLY2cOO2U660XVqV2cu9EYHARnYZwiUeTDk6pysrStczagejLw==
 
 falcor-path-utils@~0.5.0:
   version "0.5.1"
@@ -451,6 +478,16 @@ falcor-router@^0.8.3:
     falcor-path-utils "~0.5.0"
     rxjs "~5.1.1"
     symbol-observable "^1.0.4"
+
+falcor@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/falcor/-/falcor-2.2.0.tgz#de6bc92ae61cc1e6d8e4ee2972e9c61df4644f3a"
+  integrity sha512-qB/vtfaifgBpGiKJEIf7xieCREnLVzPAZckMFKsPvDStFqN70SWmEjqEy/O2Jkdy3RIoqB5higo6bhTXm/r17A==
+  dependencies:
+    falcor-json-graph "1.1.7"
+    falcor-path-syntax "0.2.4"
+    falcor-path-utils "0.7.2"
+    symbol-observable "^1.2.0"
 
 finalhandler@~1.1.2:
   version "1.1.2"
@@ -628,6 +665,11 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
+object-assign@^4:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -775,7 +817,7 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-symbol-observable@^1.0.1, symbol-observable@^1.0.4:
+symbol-observable@^1.0.1, symbol-observable@^1.0.4, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
@@ -839,7 +881,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-vary@~1.1.2:
+vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
