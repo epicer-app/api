@@ -2,7 +2,7 @@ import { ref } from "../utils";
 
 const recipeList = [{
     id: 'asdf1234',
-    name: 'Dutch Babay',
+    name: 'Dutch Baby',
     ingredients: [{
         name: 'large eggs',
         amount: 4,
